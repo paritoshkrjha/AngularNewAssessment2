@@ -1,7 +1,9 @@
-<form [formGroup]="loginForm" (ngSubmit)="onClick()">
-  <label>Email</label>
-  <input type="email" name="email" formControlName="email" />
-  <label>Password</label>
-  <input type="password" name="password" formControlName="password" />
-  <button type="submit">Login</button>
-</form>
+<div>
+  <form [formGroup]="loginForm" (ngSubmit)="onClick()">
+    <label>Email</label>
+    <input type="email" name="email" formControlName="email" />
+    <label>Password</label>
+    <input type="password" name="password" formControlName="password" />
+    <button type="submit">Login</button>
+  </form>
+</div>

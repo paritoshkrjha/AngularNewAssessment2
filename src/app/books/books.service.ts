@@ -75,4 +75,11 @@ export class BooksService {
   getMyBooks(): Book[] {
     return this.myBooks;
   }
+
+  deleteBook(bookId: string): void {
+    this.books = this.books.filter((b) => b.id !== bookId);
+    this.myBooks = this.myBooks.filter((b) => b.id !== bookId);
+    this.saveBooksToLocalStorage();
+    this.saveUserBooksToLocalStorage(this.authService.getUserId());
+  }
 }

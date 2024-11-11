@@ -41,10 +41,6 @@ export const routes: Routes = [
       {
         path: 'view/:id',
         component: ViewBookDetailsComponent,
-        canActivate: [authGuard],
-        data: {
-          role: 'LIBRARIAN',
-        },
       },
       {
         path: 'edit/:id',

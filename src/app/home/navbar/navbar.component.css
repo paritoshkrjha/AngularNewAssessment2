@@ -1,5 +1,7 @@
 ul {
   display: flex;
+  justify-content: center;
+    align-items: center;
 }
 
 li {
@@ -17,7 +19,13 @@ a:hover {
 }
 
 button {
+  padding: 0.7em;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 header {

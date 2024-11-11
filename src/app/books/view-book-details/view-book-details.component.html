@@ -1,1 +1,17 @@
-<p>view-book-details works!</p>
+<div class="wrapper">
+  <h1>Customer Details</h1>
+  <div>
+    <h2>{{ "Title: " + bookDetails?.title }}</h2>
+    <p>{{ "Author: " + bookDetails?.author }}</p>
+    <p>{{ "ISBN: " + bookDetails?.ISBN }}</p>
+    <p>{{ "Status:" + isBookAvailable }}</p>
+    @if(!this.bookDetails?.available){
+    <p>{{ "Issued By: " + bookDetails?.issuedByUser }}</p>
+    }
+    @if(isAdmin){
+        <div id="button-group">
+            <button (click)="onDelete()">Delete</button>
+        </div>
+    }
+  </div>
+</div>
