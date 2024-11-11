@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Book } from '../books.model';
 import { AuthService } from '../../auth/auth.service';
 import { BooksService } from '../books.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-book-item',
@@ -18,7 +19,8 @@ export class BookItemComponent {
 
   constructor(
     private authService: AuthService,
-    private bookService: BooksService
+    private bookService: BooksService,
+    private router: Router
   ) {}
 
   get isAdmin(): boolean {
@@ -45,5 +47,9 @@ export class BookItemComponent {
       this.authService.getUserName(),
       this.book.id
     );
+  }
+
+  onView() {
+    this.router.navigate(['view', this.book.id]);
   }
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { BooksService } from '../books.service';
 import { Book } from '../books.model';
-import { BookItemComponent } from "../book-item/book-item.component";
+import { BookItemComponent } from '../book-item/book-item.component';
 
 @Component({
   selector: 'app-all-books',
