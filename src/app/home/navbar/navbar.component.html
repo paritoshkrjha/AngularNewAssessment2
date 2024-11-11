@@ -1,0 +1,33 @@
+<header>
+  <p>Welcome, Status : {{ userStatus }}</p>
+  <ul>
+    <li>
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+    </li>
+    <li>
+      @if(isAdmin){
+      <a
+        routerLink="/add"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Add Book</a
+      >
+      } @else {
+      <a
+        routerLink="/my-books"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >My Books</a
+      >
+      }
+    </li>
+    <li>
+      <button (click)="handleLogOut()">Log out</button>
+    </li>
+  </ul>
+</header>

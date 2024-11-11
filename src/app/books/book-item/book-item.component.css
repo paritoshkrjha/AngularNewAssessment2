@@ -1,0 +1,36 @@
+#card {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 14px;
+}
+
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.available {
+  color: rgb(11, 231, 11);
+}
+
+.not-available {
+  color: red;
+}
+#button-group{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+

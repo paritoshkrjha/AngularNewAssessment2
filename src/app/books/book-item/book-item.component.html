@@ -1,0 +1,35 @@
+<div id="card">
+  <div>
+    <h3>{{ book.title }}</h3>
+    <p>Author : {{ book.author }}</p>
+  </div>
+  <div id="button-group">
+    <div>
+      @if(!isAdmin){ @if(   this.book.issuedByUser === currentUserName){
+      <button (click)="handleReturn()">Return</button>
+      } @else{
+      <button
+        [class.disabled]="!isBookAvailable"
+        [disabled]="!isBookAvailable"
+        (click)="handleCheckout()"
+      >
+        Checkout
+      </button>
+      <p
+        [class.available]="isBookAvailable"
+        [class.not-avaialable]="!isBookAvailable"
+      >
+        @if(isBookAvailable){ Available! } @else { Not Available! }
+      </p>
+      } } @else {
+      <button>Edit</button>
+      <p
+        [class.available]="isBookAvailable"
+        [class.not-avaialable]="!isBookAvailable"
+      >
+        @if(isBookAvailable){ Available! } @else { Not Available! }
+      </p>
+      }
+    </div>
+  </div>
+</div>

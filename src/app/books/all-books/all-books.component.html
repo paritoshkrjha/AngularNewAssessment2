@@ -1,0 +1,5 @@
+<h1>List of Books</h1>
+
+@for(book of books; track book.id){
+<app-book-item [book]="book"></app-book-item>
+}
