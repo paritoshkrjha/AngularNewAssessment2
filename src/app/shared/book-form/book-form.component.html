@@ -1,15 +1,24 @@
 <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
   <div class="control">
     <label>Title</label>
-    <input type="text" name="title" formControlName="name" />
+    <input type="text" name="title" formControlName="title" />
   </div>
+  @if(isTitleInvalid){
+  <p class="error">Title is required</p>
+  }
   <div class="control">
     <label>Author</label>
     <input type="text" name="author" formControlName="author" />
   </div>
+  @if(isAuthorInvalid){
+  <p class="error">Author is required</p>
+  }
   <div class="control">
     <label>ISBN</label>
-    <input type="text" name="isbn" formControlName="ISBN" />
+    <input type="text" name="ISBN" formControlName="ISBN" />
   </div>
+  @if(isISBNInvalid){
+  <p class="error">ISBN is required</p>
+  }
   <button type="submit">Submit</button>
 </form>

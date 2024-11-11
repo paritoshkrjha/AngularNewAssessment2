@@ -63,6 +63,11 @@ export class BooksService {
     this.saveUserBooksToLocalStorage(this.authService.getUserId());
   }
 
+  addBook(book: Book): void {
+    this.books.push(book);
+    this.saveBooksToLocalStorage();
+  }
+
   getAllBooks(): Book[] {
     return this.books;
   }
